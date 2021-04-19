@@ -16,10 +16,10 @@ class AllJournals extends Component {
 	render() {
 		return (
 			<Container>
-				<Create id={user[0].id}name={user[0].firstName} />
+				<Create id={this.state.user.id} name={this.state.user.firstName} />
 				<br></br>
 
-				{this.state.user.map((user) => <Card id={user[0].journals[0].journals[0].journal_id} title={user[0].journals[0].name} />
+				{this.state.user.map((user) => user.journals.map((journal) => <Card id={journal.journal_id} title={journal.name} />)
 			)}
 	</Container>
 		)

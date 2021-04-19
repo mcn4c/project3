@@ -11,7 +11,7 @@ function Entry() {
 						</label>
 						<textarea className="form-control" id="textAreaExample" rows="1" />
 					</div>
-					<button style={{ backgroundColor: 'red', color: 'white' }}>Save</button>
+					<button>Save</button>
 				</h5>
 				<div className="card-body">
 					<div className="form-outline">

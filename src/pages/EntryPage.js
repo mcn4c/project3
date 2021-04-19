@@ -16,7 +16,10 @@ class EntryPage extends Component {
 	render() {
 		return (
 			<Wrapper>
-				{user.map((user) => <SideNav id={user.journals.journal_id} title={user.journals[0].article.title} />)}
+
+				{this.state.user.map((user) => user.journals[0].article.map((article)  => <SideNav id={article.article_id} title={article.title} />)
+				)
+				}
 
 				<Entry />
 			</Wrapper>

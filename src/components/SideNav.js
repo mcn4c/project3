@@ -4,7 +4,7 @@ function SideNav(props) {
 	return (
 		<aside>
 			<div id="mySidenav" class="sidenav">
-				<a href="#" style={{ color: 'red' }} key={props.id}>
+				<a href="#"  key={props.id}>
 					{props.title}
 				</a>
 			</div>
