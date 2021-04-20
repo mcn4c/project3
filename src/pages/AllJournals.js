@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Card from '../components/Cards';
 import Create from '../components/Create';
 import { Container } from '../components/Grid';
@@ -8,6 +8,7 @@ import user from '../user.json';
 
 class AllJournals extends Component {
 	// Setting this.state.friends to the friends json array
+	
 	state = {
 		user
 		
