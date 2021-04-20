@@ -1,25 +1,16 @@
 import React from 'react';
-import API from '../utils/API';
+// import API from '../utils/API';
+import quotes from "../quotes.json"
 // import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	// Create state variables
 
-	//This call does not seem to work try component did mount
-	let [responseData, setResponseData] = React.useState('')
-    // fetches data	// fetches data
 
-	const fetchData = () => {
-		API.getQuote()
-			.then((response) => {
-				setResponseData(response.data);
-				console.log(response);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	};
-	fetchData();
+	let quote = quotes[Math.floor(Math.random() * quotes.length)]
+	console.log(quote);
+	let navQuote = `${quote.q} ~ ${quote.a}`;
+	console.log(quote.q)
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,7 +30,7 @@ const Navbar = () => {
 			</button>
 			<div className="collapse navbar-collapse" id="navbarText">
 				<span className="navbar-text" style={{ textAlign: 'center' }}>
-					{responseData.h}
+					{navQuote}
 				</span>
 				<ul className="navbar-nav ml-auto">
 					<li className="nav-item active">
